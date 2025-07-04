@@ -1,6 +1,6 @@
 # Elite FC
 
-Elite FC is a web application for managing a football club's operations and activities.
+A comprehensive Football Team Management Platform for managing a football club's operations and activities.
 
 ## Features
 - Team management
