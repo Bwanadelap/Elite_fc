@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PitchMaster | Elite Football Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="glass-card"
+            style="position: sticky; top: 0; z-index: 100; margin: 10px; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo" data-action="hero"
+                style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                <i data-lucide="trophy" style="color: var(--primary);"></i>
+                <span
+                    style="font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px; color: var(--primary);">PitchMaster</span>
+            </div>
+            <div class="nav-links" style="display: flex; gap: 25px; font-weight: 500;">
+                <a href="#" class="nav-item" data-action="hero">Home</a>
+                <a href="#" class="nav-item" data-action="show-teams">Teams</a>
+                <a href="#" class="nav-item" data-action="show-calendar">Calendar</a>
+                <a href="#" class="nav-item" data-action="show-market">Market</a>
+            </div>
+            <div class="auth-btns" style="display: flex; gap: 15px;">
+                <button class="btn-outline" data-action="show-login" style="padding: 8px 20px;">Sign In</button>
+                <button class="btn-primary" data-action="show-signup" style="padding: 8px 20px;">Join Club</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="main-content" class="container" style="padding: 40px 20px;">
+            <!-- Hero Section (Default View) -->
+            <section id="hero-view" class="animate-fade-in"
+                style="text-align: center; max-width: 800px; margin: 80px auto;">
+                <h1
+                    style="font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px; color: var(--primary);">
+                    Manage Your Team <br>Like a Pro.</h1>
+                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px;">The all-in-one platform for
+                    football teams. Light, fast, and driven by smart analytics.</p>
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                    <button class="btn-primary" style="font-size: 1.1rem; padding: 16px 40px;">Get Started</button>
+                    <button class="btn-outline" style="font-size: 1.1rem; padding: 16px 40px;">View Demo</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Dynamic Views will be injected here -->
+        <footer class="container"
+            style="margin-top: 80px; padding: 40px 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; color: var(--text-muted);">
+            <div>© 2024 PitchMaster Elite. All rights reserved.</div>
+            <div style="display: flex; gap: 30px;">
+                <a href="#" data-action="show-sla">SLA</a>
+                <a href="#" data-action="show-subscription">Pricing</a>
+                <a href="#">Privacy</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js" type="module"></script>
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+    </script>
+
+    <style>
+        .nav-item {
+            color: var(--text-main);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            opacity: 1;
+            color: var(--primary);
+        }
+    </style>
+</body>
+
+</html>
